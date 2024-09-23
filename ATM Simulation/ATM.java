@@ -38,7 +38,20 @@ public class ATM{
     public int getBalance(){
         return balance;
     }
+
+
+    public boolean validatePin(int pin){
+        return this.pin == pin;
+    }
+
+
+    public void changePin(int newPin){
+        pin = newPin;
+
+    }
     public static void main(String[] args) {
-        System.out.println("Hello Worls");
+        ATM atm = new ATM(1500, 1596);
+        atm.displayMenu();
+        atm.deposit(1000);
     }
 }
