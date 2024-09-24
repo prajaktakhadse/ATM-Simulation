@@ -47,6 +47,7 @@ public class ATM{
 
     public void changePin(int newPin){
         pin = newPin;
+        System.out.println("Pin Successfully Changed");
 
     }
     public static void main(String[] args) {
@@ -77,17 +78,22 @@ public class ATM{
                         break;
 
                     case 4:
-                        
+                        System.out.println("Enter NewPin:");
+                       int newPin = Integer.parseInt(System.console().readLine());
+                        atm.changePin(newPin);
                         break;
 
                     case 5:
-                        
+                        System.out.println("Thank you for Visiting..!!");
                         break;
 
                     default:
                        break;
                 }
             }
+        }
+        else{
+            System.out.println("Please provide Correct Pin");
         }
 
     }
