@@ -61,15 +61,19 @@ public class ATM{
                 option =  Integer.parseInt(System.console().readLine());
                 switch(option){
                     case 1:
-                        
+                        System.out.println("Balance:" + atm.getBalance());
                         break;
 
                     case 2:
-                        
+                        System.out.println("Enter Amount:");
+                        int amount = Integer.parseInt(System.console().readLine());
+                        atm.deposit(amount);
                         break;
 
                     case 3:
-                        
+                        System.out.println("Enter Amount:");
+                        amount = Integer.parseInt(System.console().readLine());
+                        atm.withdraw(amount);
                         break;
 
                     case 4:
