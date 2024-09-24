@@ -52,6 +52,15 @@ public class ATM{
     public static void main(String[] args) {
         ATM atm = new ATM(1500, 1596);
         atm.displayMenu();
-        atm.deposit(1000);
+        System.out.print("Enter the pin: ");
+        int pin = Integer.parseInt(System.console().readLine());
+        if(atm.validatePin(pin)){
+            int option  = 0;
+            while(option != 5 ){
+                atm.displayMenu();
+                option =  Integer.parseInt(System.console().readLine());
+            }
+        }
+
     }
 }
